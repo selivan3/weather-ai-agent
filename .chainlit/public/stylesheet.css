@@ -1,0 +1,144 @@
+html,
+body,
+#root {
+  font-family: var(--font-sans) !important;
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+body *,
+button,
+input,
+textarea {
+  font-family: inherit !important;
+}
+
+body,
+main,
+header,
+aside,
+section,
+article,
+footer {
+  background-image: none !important;
+}
+
+[class*="MuiAppBar-root"] {
+  background: hsl(var(--background)) !important;
+  border-bottom: 1px solid hsl(var(--border)) !important;
+  box-shadow: none !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+#readme-button {
+  display: none !important;
+}
+
+#chat-settings-header-button {
+  color: hsl(var(--foreground)) !important;
+}
+
+#chat-settings-header-button:hover {
+  background: hsl(var(--accent)) !important;
+}
+
+[class*="MuiPaper-root"],
+[class*="MuiCard-root"],
+[class*="MuiDrawer-paper"],
+[class*="MuiDialog-paper"],
+[class*="MuiAccordion-root"],
+[class*="MuiMenu-paper"],
+[class*="MuiPopover-paper"],
+[data-testid="chat-settings"],
+[data-testid="chat-history"],
+[data-testid="chat-messages"] {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  box-shadow: none !important;
+}
+
+[class*="MuiButton-root"] {
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
+
+[class*="MuiButton-contained"],
+[class*="MuiButton-containedPrimary"],
+.bg-primary,
+button[class*="bg-primary"],
+button[aria-label*="Send"],
+button[aria-label*="Stop"],
+button[title*="Send"],
+button[title*="Stop"] {
+  background: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-color: hsl(var(--primary)) !important;
+}
+
+[class*="MuiButton-contained"]:hover,
+[class*="MuiButton-containedPrimary"]:hover,
+.bg-primary:hover,
+button[class*="bg-primary"]:hover,
+button[aria-label*="Send"]:hover,
+button[aria-label*="Stop"]:hover,
+button[title*="Send"]:hover,
+button[title*="Stop"]:hover {
+  filter: brightness(0.96);
+}
+
+[class*="MuiButton-outlined"],
+[class*="MuiButton-text"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+[class*="MuiInputBase-root"],
+input,
+textarea,
+form,
+[class*="MuiFormControl-root"],
+[class*="MuiOutlinedInput-root"],
+[class*="MuiTextareaAutosize-root"],
+[class*="MuiStack-root"] textarea {
+  background: hsl(var(--secondary)) !important;
+  color: hsl(var(--foreground)) !important;
+  border-color: hsl(var(--border)) !important;
+  box-shadow: none !important;
+}
+
+a,
+.text-primary,
+.fill-primary {
+  color: hsl(var(--primary)) !important;
+  fill: hsl(var(--primary)) !important;
+}
+
+.border-border,
+[class*="border-border"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+.ring-ring,
+[class*="ring-ring"] {
+  --tw-ring-color: hsl(var(--ring)) !important;
+}
+
+[class*="MuiListItemButton-root"]:hover,
+[class*="MuiMenuItem-root"]:hover,
+[class*="MuiAccordionSummary-root"]:hover,
+[data-testid="chat-history"] [role="button"]:hover {
+  background: hsl(var(--accent)) !important;
+}
+
+[class*="MuiChip-root"],
+[class*="MuiBadge-root"] {
+  background: hsl(var(--secondary)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+svg,
+img {
+  filter: none !important;
+}

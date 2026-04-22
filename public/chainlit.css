@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap");
+
+:root {
+  --minimal-bg: #ffffff;
+  --minimal-surface: #f3f9ff;
+  --minimal-surface-muted: #eaf5ff;
+  --minimal-ink: #14324a;
+  --minimal-muted: #5a748b;
+  --minimal-border: #c7def2;
+  --minimal-border-strong: #acd0ea;
+  --minimal-hover: #e3f1ff;
+  --font-sans: "Golos Text", sans-serif;
+  --background: 0 0% 100%;
+  --foreground: 206 57% 18%;
+  --card: 205 100% 98%;
+  --card-foreground: 206 57% 18%;
+  --popover: 205 100% 98%;
+  --popover-foreground: 206 57% 18%;
+  --primary: 199 100% 52%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 205 100% 97%;
+  --secondary-foreground: 206 57% 18%;
+  --muted: 205 85% 94%;
+  --muted-foreground: 209 23% 41%;
+  --accent: 204 100% 95%;
+  --accent-foreground: 206 57% 18%;
+  --destructive: 0 72% 46%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 205 61% 86%;
+  --input: 205 61% 86%;
+  --ring: 199 100% 52%;
+  --sidebar-background: 205 100% 98%;
+  --sidebar-foreground: 206 57% 18%;
+  --sidebar-primary: 199 100% 52%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 204 100% 95%;
+  --sidebar-accent-foreground: 206 57% 18%;
+  --sidebar-border: 205 61% 86%;
+  --sidebar-ring: 199 100% 52%;
+}
+
+html,
+body,
+* {
+  font-family: "Golos Text", sans-serif !important;
+}
+
+body {
+  background: var(--minimal-bg) !important;
+  color: var(--minimal-ink) !important;
+  background-image: none !important;
+}
+
+a {
+  color: hsl(var(--primary)) !important;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: "Golos Text", sans-serif !important;
+}
+
+[class*="MuiPaper-root"],
+[class*="MuiCard-root"],
+[class*="MuiDrawer-paper"],
+[class*="MuiAppBar-root"],
+[class*="MuiAccordion-root"],
+[class*="MuiDialog-paper"],
+[class*="MuiPopover-paper"],
+[data-testid="chat-settings"],
+[data-testid="chat-history"],
+[data-testid="chat-messages"] {
+  background: var(--minimal-surface) !important;
+  border: 1px solid var(--minimal-border) !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+[class*="MuiToolbar-root"],
+[class*="MuiList-root"],
+[class*="MuiTable-root"],
+[class*="MuiStack-root"] {
+  background-image: none !important;
+}
+
+[class*="MuiButton-contained"],
+[class*="MuiButton-root"] {
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+}
+
+[class*="MuiButton-containedPrimary"] {
+  background: hsl(var(--primary)) !important;
+  color: #ffffff !important;
+}
+
+[class*="MuiButton-outlined"] {
+  border-color: var(--minimal-border) !important;
+}
+
+[class*="MuiInputBase-root"],
+[class*="MuiOutlinedInput-root"],
+[class*="MuiFilledInput-root"],
+[class*="MuiFormControl-root"],
+[class*="MuiTextareaAutosize-root"],
+form {
+  background: var(--minimal-surface-muted) !important;
+  box-shadow: none !important;
+}
+
+[class*="MuiOutlinedInput-notchedOutline"] {
+  border-color: var(--minimal-border) !important;
+}
+
+[class*="MuiChip-root"] {
+  background: var(--minimal-surface-muted) !important;
+  border: 1px solid var(--minimal-border) !important;
+}
+
+[class*="MuiDivider-root"] {
+  border-color: var(--minimal-border) !important;
+}
+
+.bg-primary,
+button[class*="bg-primary"] {
+  background: hsl(var(--primary)) !important;
+  color: #ffffff !important;
+}
+
+.text-primary,
+.fill-primary {
+  color: hsl(var(--primary)) !important;
+  fill: hsl(var(--primary)) !important;
+}
+
+.border-border,
+[class*="border-border"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+.ring-ring,
+[class*="ring-ring"] {
+  --tw-ring-color: hsl(var(--ring)) !important;
+}
+
+[class*="MuiButton-containedPrimary"]:hover,
+.bg-primary:hover,
+button[class*="bg-primary"]:hover {
+  background: #0094f0 !important;
+}
+
+[class*="MuiListItemButton-root"]:hover,
+[class*="MuiMenuItem-root"]:hover,
+[class*="MuiAccordionSummary-root"]:hover,
+[data-testid="chat-history"] [role="button"]:hover {
+  background: var(--minimal-hover) !important;
+}
+
+[class*="MuiChip-root"],
+[class*="MuiBadge-root"] {
+  background: var(--minimal-surface-muted) !important;
+  border: 1px solid var(--minimal-border) !important;
+  color: var(--minimal-ink) !important;
+}
+
+button[aria-label*="Stop"],
+button[aria-label*="Send"],
+button[title*="Stop"],
+button[title*="Send"] {
+  background: hsl(var(--primary)) !important;
+  color: #ffffff !important;
+}

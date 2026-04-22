@@ -1,0 +1,13 @@
+fastapi==0.135.3
+uvicorn[standard]==0.44.0
+chainlit==2.11.0
+langchain==1.2.15
+langfuse==4.0.6
+httpx==0.28.1
+jinja2==3.1.6
+pydantic==2.12.5
+pydantic-settings==2.13.1
+cachetools==7.0.5
+python-dotenv==1.2.2
+yandex-ai-studio-sdk[langchain]==0.20.1
+gunicorn==25.3.0
