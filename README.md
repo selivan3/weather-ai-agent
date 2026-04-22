@@ -1,5 +1,7 @@
 # Weather AI Agent
 
+**🇷🇺 Русская версия** · [🇬🇧 English version](README.en.md)
+
 MVP погодного ИИ-агента на стеке **FastAPI + Chainlit + LangChain + Langfuse + Pydantic + Yandex AI Studio (DeepSeek V3.2) + WeatherAPI**.
 
 Спецсеминар, магистратура КубГУ.
