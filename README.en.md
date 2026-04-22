@@ -4,7 +4,7 @@
 
 MVP of a weather AI agent built on **FastAPI + Chainlit + LangChain + Langfuse + Pydantic + Yandex AI Studio (DeepSeek V3.2) + WeatherAPI**.
 
-KubSU (Kuban State University) master's programme, special seminar.
+Academic project: Kuban State University (KubSU) master's programme in "Applied Informatics", specialisation "Artificial Intelligence and Machine Learning", 2025–2027. Author — Ivan Selivanov.
 
 ## What it does
 
