@@ -15,6 +15,16 @@ KubSU (Kuban State University) master's programme, special seminar.
 - Uses the official `yandex-ai-studio-sdk` to talk to Yandex AI Studio (model `deepseek-v32`).
 - Groups agentic sessions in **Langfuse** by `session_id` — full trace of each dialog: tools, tokens, latencies.
 
+## Screenshots
+
+**Agent greeting and the current-weather widget.** The agent immediately renders a "Now" card for the default city (Krasnodar) with follow-up buttons ("Next 3 days", "Umbrella?").
+
+![Chat interface — welcome + current weather](docs/screenshots/01-chat-interface.png)
+
+**Agent's reply with a forecast widget.** Asked "is it raining today?", the agent fetched the forecast and rendered a "Today's forecast" card: "Patchy rain", 99% chance of rain, breakdown by average / morning / evening, plus follow-ups ("Compare day", "When to walk?").
+
+![Forecast widget after user question](docs/screenshots/02-weather-widget.png)
+
 ## Architecture
 
 ```mermaid
