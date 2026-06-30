@@ -8,7 +8,7 @@ MVP погодного ИИ-агента на стеке **FastAPI + Chainlit + 
 
 ## Что умеет
 
-- На `/` показывает текущую погоду по `DEFAULT_CITY` без участия LLM (быстрый server-render).
+- На `/` аккуратно переводит пользователя в основной интерфейс агента `/chat/`.
 - На `/chat` открывает Chainlit-чат с погодным агентом: понимает свободные запросы на русском/английском, обращается к инструментам, отдаёт текст + интерактивные погодные виджеты.
 - Отдаёт типизированные погодные endpoint-ы через FastAPI: `current`, `forecast`, `history`.
 - Использует `WeatherAPI` как провайдер погоды.
@@ -150,7 +150,7 @@ weather-agent/
 │  ├─ chainlit_app.py      # Chainlit handler для /chat
 │  ├─ observability.py     # Langfuse CallbackHandler
 │  └─ logging_config.py
-├─ templates/index.html    # серверный HTML для /
+├─ templates/index.html    # HTML-заготовка для интерфейсного слоя
 ├─ static/style.css
 ├─ public/                 # Chainlit assets
 ├─ scripts/dev.sh          # одна команда для локального запуска
@@ -185,7 +185,7 @@ uvicorn app.main:app --reload
 
 После запуска:
 
-- http://127.0.0.1:8000/ — серверный HTML с текущей погодой
+- http://127.0.0.1:8000/ — переход в основной интерфейс агента
 - http://127.0.0.1:8000/chat — Chainlit-агент
 - http://127.0.0.1:8000/docs — Swagger UI FastAPI
 - http://127.0.0.1:8000/health — liveness
@@ -212,7 +212,7 @@ APP_ENV=local
 
 | Метод | Путь | Описание |
 |------|------|-----------|
-| `GET` | `/` | Серверная HTML-карточка с текущей погодой |
+| `GET` | `/` | Переход в основной интерфейс агента `/chat/` |
 | `GET` | `/chat` | Chainlit UI с агентом |
 | `GET` | `/health` | Liveness probe |
 | `GET` | `/api/weather/current?city=Krasnodar` | Текущая погода |
@@ -258,7 +258,7 @@ Chainlit работает внутри FastAPI по `/chat` через WebSocket
 
 - `.env` не коммитится (есть `.gitignore`).
 - Секреты не печатаются в логах.
-- Любой ранее опубликованный Yandex / WeatherAPI / Langfuse key нужно **перевыпустить** перед реальным использованием.
+- Если ключ Yandex / WeatherAPI / Langfuse случайно опубликован, его нужно **перевыпустить** перед реальным использованием.
 
 ## Стек (версии)
 

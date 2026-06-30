@@ -165,6 +165,3 @@ default_avatar_file_url = "/public/weather-agent-avatar.svg"
 # This can be used to customize the frontend code.
 # Be careful: If this is a relative path, it should not start with a slash.
 # custom_build = "./public/build"
-
-[meta]
-generated_by = "2.11.0"

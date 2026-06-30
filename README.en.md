@@ -8,7 +8,7 @@ Academic project: Kuban State University (KubSU) master's programme in "Applied 
 
 ## What it does
 
-- On `/` — renders a server-side HTML card with the current weather for `DEFAULT_CITY` without invoking the LLM (fast path).
+- On `/` — redirects the user to the main agent interface at `/chat/`.
 - On `/chat` — opens a Chainlit chat with the weather agent: understands free-form Russian/English queries, calls tools, returns text plus interactive weather widgets.
 - Exposes typed FastAPI endpoints for weather: `current`, `forecast`, `history`.
 - Uses **WeatherAPI** as the weather provider.
@@ -150,7 +150,7 @@ weather-agent/
 │  ├─ chainlit_app.py      # Chainlit handler for /chat
 │  ├─ observability.py     # Langfuse CallbackHandler
 │  └─ logging_config.py
-├─ templates/index.html    # server-side HTML for /
+├─ templates/index.html    # HTML scaffold for the interface layer
 ├─ static/style.css
 ├─ public/                 # Chainlit assets
 ├─ scripts/dev.sh          # one-command local run
@@ -185,7 +185,7 @@ uvicorn app.main:app --reload
 
 After it's up:
 
-- http://127.0.0.1:8000/ — server-rendered HTML with current weather
+- http://127.0.0.1:8000/ — redirects to the main agent interface
 - http://127.0.0.1:8000/chat — Chainlit agent
 - http://127.0.0.1:8000/docs — FastAPI Swagger UI
 - http://127.0.0.1:8000/health — liveness probe
@@ -212,7 +212,7 @@ APP_ENV=local
 
 | Method | Path | Description |
 |--------|------|-------------|
-| `GET`  | `/` | Server-rendered HTML card with current weather |
+| `GET`  | `/` | Redirect to the main agent interface at `/chat/` |
 | `GET`  | `/chat` | Chainlit UI with the agent |
 | `GET`  | `/health` | Liveness probe |
 | `GET`  | `/api/weather/current?city=Krasnodar` | Current weather |
@@ -258,7 +258,7 @@ Chainlit runs inside FastAPI on `/chat` over WebSocket — Heroku supports WS ou
 
 - `.env` is not committed (`.gitignore`).
 - Secrets are not printed to logs.
-- Any Yandex / WeatherAPI / Langfuse key that was ever published must be **rotated** before real use.
+- If a Yandex / WeatherAPI / Langfuse key is accidentally published, rotate it before real use.
 
 ## Stack (versions)
 
